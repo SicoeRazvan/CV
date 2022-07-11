@@ -1,6 +1,6 @@
 # My personal CV
 
-This my CV created with HTML and CSS
+This is my CV created with HTML and CSS
 
 ## Live
 
