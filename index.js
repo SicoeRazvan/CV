@@ -1,21 +1,30 @@
-// console.info(2);
-// console.debug(23 + 2);
-// console.warn(6 * 3 - 10);
-// console.error("started");
+function showHomePage() {
+  hidePages();
+  document.getElementById("home").style.display = "block";
+}
 
-// // var myName = "Matei";
-// var age = 29;
-// // console.info("My name is " + myName + ", I'm " + age + " years old.");
-// age = 30;
-// //console.info("My name is " + myName + ", I'm " + age + " years old.");
-// age = 31;
-// //console.info("My name is " + myName + ", I'm " + age + " years old.");
+function showSkillsPage() {
+  hidePages();
+  document.getElementById("skills").style.display = "block";
+}
 
-// var jobTitle = "<span>Trainer</span> @ FastTrackIT";
-// var mottoElement = document.getElementById("motto");
+function showProjectsPage() {
+  hidePages();
+  document.getElementById("projects").style.display = "block";
+}
 
-// console.info(mottoElement);
-// console.warn(mottoElement.innerHTML);
+function showLanguagesPage() {
+  hidePages();
+  document.getElementById("languages").style.display = "block";
+}
 
-// //mottoElement.innerHTML = mottoElement.innerHTML + " & " + jobTitle;
-// mottoElement.innerHTML += " & " + jobTitle;
+function hidePages() {
+  const pages = Array.from(document.getElementsByClassName("page"));
+  pages.forEach((page) => hide(page.id));
+}
+
+function hide(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+showHomePage();
