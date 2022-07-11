@@ -1,3 +1,8 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
 html {
   height: 100%;
 }
@@ -26,18 +31,19 @@ body {
 }
 #header-info {
   flex: 1;
+  margin-left: 20px;
 }
 h1 {
   margin-bottom: 10px;
 }
 
 p {
-  color: red;
+  color: black;
 }
 
 #motto {
   margin: 0;
-  text-align: right;
+  text-align: left;
 }
 
 #motto span {
@@ -45,8 +51,7 @@ p {
 }
 
 .favorite {
-  font-weight: bold;
-  color: darkgreen;
+  
 }
 
 #top-menu-bar {
@@ -84,4 +89,12 @@ p {
 }
 .page h2 {
   margin-top: 0;
+}
+
+#avatar {
+  border-radius: 50%;
+}
+
+#header-wrapper {
+  margin: 20px;
 }
