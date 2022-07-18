@@ -1,30 +1,50 @@
 function showHomePage() {
-  hidePages();
-  document.getElementById("home").style.display = "block";
+  //hidePages();
+  hidePage("home");
+  hidePage("skills");
+  hidePage("languages");
+  showPage("home");
 }
 
 function showSkillsPage() {
-  hidePages();
-  document.getElementById("skills").style.display = "block";
+  //hidePages();
+  hidePage("home");
+  hidePage("projects");
+  hidePage("languages");
+  showPage("skills");
 }
 
 function showProjectsPage() {
-  hidePages();
-  document.getElementById("projects").style.display = "block";
+  //hidePages();
+  hidePage("home");
+  hidePage("skills");
+  hidePage("languages");
+  showPage("projects");
 }
 
 function showLanguagesPage() {
-  hidePages();
-  document.getElementById("languages").style.display = "block";
+  //hidePages();
+  hidePage("home");
+  hidePage("skills");
+  hidePage("projects");
+  showPage("languages");
 }
 
-function hidePages() {
-  const pages = Array.from(document.getElementsByClassName("page"));
-  pages.forEach((page) => hide(page.id));
-}
-
-function hide(id) {
+function hidePage(id) {
   document.getElementById(id).style.display = "none";
 }
+
+function showPage(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+// function hidePages() {
+//   const pages = Array.from(document.getElementsByClassName("page"));
+//   pages.forEach((page) => hide(page.id));
+// }
+
+// function hide(id) {
+//   document.getElementById(id).style.display = "none";
+// }
 
 showHomePage();
