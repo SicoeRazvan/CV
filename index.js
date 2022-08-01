@@ -32,13 +32,13 @@ function initEvents() {
 showPage(activePage);
 initEvents();
 
-function displaySkills() {
+function displaySkills(skills) {
   var ul = document.querySelector("#skills ul");
-  var skills = [
-    { name: "js", endorcements: 15, favorite: true },
-    { name: "html", endorcements: 5, favorite: true },
-    { name: "css", endorcements: 10, favorite: false },
-  ];
+  // var skills = [
+  //   { name: "js", endorcements: 15, favorite: true },
+  //   { name: "html", endorcements: 5, favorite: true },
+  //   { name: "css", endorcements: 10, favorite: false },
+  // ];
 
   skills.sort(function (a, b) {
     return b.endorcements - a.endorcements;
@@ -53,11 +53,21 @@ function displaySkills() {
     // return 0;
   });
 
-  
   favorite = [true, true.false];
   for (var i = 0; i < skills.length; i++) {
     ul.innerHTML += `<li>${skills[i].name} - ${skills[i].endorcements}</li>`;
   }
 }
 
-displaySkills();
+
+
+function loadSkills() {
+  fetch("skills.json").then(function(response){
+    return response.json();
+  }).then(function(skills){
+    console.warn("am primit ceva ori nu?", skills)
+    displaySkills(skills);
+  });
+}
+
+loadSkills();
